@@ -86,7 +86,19 @@ function stylize(str, style) {
       'greenBG'     : ['\x1B[42m', '\x1B[49m'],
       'magentaBG'   : ['\x1B[45m', '\x1B[49m'],
       'redBG'       : ['\x1B[41m', '\x1B[49m'],
-      'yellowBG'    : ['\x1B[43m', '\x1B[49m']
+      'yellowBG'    : ['\x1B[43m', '\x1B[49m'],
+      //bright colors
+      //grayscale
+      'bWhiteBG'     : ['\x1B[107m', '\x1B[49m'],
+      'bGreyBG'      : ['\x1B[109;5;8m', '\x1B[49m'],
+      'bBlackBG'     : ['\x1B[100m', '\x1B[49m'],
+      //colors
+      'bBlueBG'      : ['\x1B[104m', '\x1B[49m'],
+      'bCyanBG'      : ['\x1B[106m', '\x1B[49m'],
+      'bGreenBG'     : ['\x1B[102m', '\x1B[49m'],
+      'bMagentaBG'   : ['\x1B[105m', '\x1B[49m'],
+      'bRedBG'       : ['\x1B[101m', '\x1B[49m'],
+      'bYellowBG'    : ['\x1B[103m', '\x1B[49m'],
     };
   } else if (exports.mode === 'browser') {
     styles = {
@@ -119,8 +131,19 @@ function stylize(str, style) {
       'greenBG'     : ['<span style="background-color:green;">',   '</span>'],
       'magentaBG'   : ['<span style="background-color:magenta;">', '</span>'],
       'redBG'       : ['<span style="background-color:red;">',     '</span>'],
-      'yellowBG'    : ['<span style="background-color:yellow;">',  '</span>']
+      'yellowBG'    : ['<span style="background-color:yellow;">',  '</span>'],
     };
+
+      // Bright mappings
+      styles['bWhiteBG'] = styles['whiteBG'];
+      styles['bGreyBG'] = styles['greyBG'];
+      styles['bBlackBG'] = styles['blackBG'];
+      styles['bBlueBG'] = styles['blueBG'];
+      styles['bCyanBG'] = styles['cyanBG'];
+      styles['bGreenBG'] = styles['greenBG'];
+      styles['bMagentaBG'] = styles['magentaBG'];
+      styles['bRedBG'] = styles['redBG'];
+      styles['bYellowBG'] = styles['yellowBG'];
   } else if (exports.mode === 'none') {
     return str + '';
   } else {
@@ -169,7 +192,9 @@ function applyTheme(theme) {
 //
 // Iterate through all default styles and colors
 //
-var x = ['bold', 'underline', 'strikethrough', 'italic', 'inverse', 'grey', 'black', 'yellow', 'red', 'green', 'blue', 'white', 'cyan', 'magenta', 'greyBG', 'blackBG', 'yellowBG', 'redBG', 'greenBG', 'blueBG', 'whiteBG', 'cyanBG', 'magentaBG'];
+var x = ['bold', 'underline', 'strikethrough', 'italic', 'inverse', 'grey', 'black', 'yellow', 'red', 'green', 'blue',
+'white', 'cyan', 'magenta', 'greyBG', 'blackBG', 'yellowBG', 'redBG', 'greenBG', 'blueBG', 'whiteBG', 'cyanBG', 'magentaBG',
+'bWhiteBG', 'bGreyBG', 'bBlackBG', 'bBlueBG', 'bCyanBG', 'bGreenBG', 'bMagentaBG', 'bRedBG', 'bYellowBG'];
 x.forEach(function (style) {
 
   // __defineGetter__ at the least works in more browsers
