@@ -89,16 +89,16 @@ function stylize(str, style) {
       'yellowBG'    : ['\x1B[43m', '\x1B[49m'],
       //bright colors
       //grayscale
-      'bWhiteBG'     : ['\x1B[107m', '\x1B[49m'],
-      'bGreyBG'      : ['\x1B[109;5;8m', '\x1B[49m'],
-      'bBlackBG'     : ['\x1B[100m', '\x1B[49m'],
+      'bwhiteBG'     : ['\x1B[107m', '\x1B[49m'],
+      'bgreyBG'      : ['\x1B[109;5;8m', '\x1B[49m'],
+      'bblackBG'     : ['\x1B[100m', '\x1B[49m'],
       //colors
-      'bBlueBG'      : ['\x1B[104m', '\x1B[49m'],
-      'bCyanBG'      : ['\x1B[106m', '\x1B[49m'],
-      'bGreenBG'     : ['\x1B[102m', '\x1B[49m'],
-      'bMagentaBG'   : ['\x1B[105m', '\x1B[49m'],
-      'bRedBG'       : ['\x1B[101m', '\x1B[49m'],
-      'bYellowBG'    : ['\x1B[103m', '\x1B[49m'],
+      'bblueBG'      : ['\x1B[104m', '\x1B[49m'],
+      'bcyanBG'      : ['\x1B[106m', '\x1B[49m'],
+      'bgreenBG'     : ['\x1B[102m', '\x1B[49m'],
+      'bmagentaBG'   : ['\x1B[105m', '\x1B[49m'],
+      'bredBG'       : ['\x1B[101m', '\x1B[49m'],
+      'byellowBG'    : ['\x1B[103m', '\x1B[49m'],
     };
   } else if (exports.mode === 'browser') {
     styles = {
@@ -135,15 +135,15 @@ function stylize(str, style) {
     };
 
       // Bright mappings
-      styles['bWhiteBG'] = styles['whiteBG'];
-      styles['bGreyBG'] = styles['greyBG'];
-      styles['bBlackBG'] = styles['blackBG'];
-      styles['bBlueBG'] = styles['blueBG'];
-      styles['bCyanBG'] = styles['cyanBG'];
-      styles['bGreenBG'] = styles['greenBG'];
-      styles['bMagentaBG'] = styles['magentaBG'];
-      styles['bRedBG'] = styles['redBG'];
-      styles['bYellowBG'] = styles['yellowBG'];
+      styles['bwhiteBG'] = styles['whiteBG'];
+      styles['bgreyBG'] = styles['greyBG'];
+      styles['bblackBG'] = styles['blackBG'];
+      styles['bblueBG'] = styles['blueBG'];
+      styles['bcyanBG'] = styles['cyanBG'];
+      styles['bgreenBG'] = styles['greenBG'];
+      styles['bmagentaBG'] = styles['magentaBG'];
+      styles['bredBG'] = styles['redBG'];
+      styles['byellowBG'] = styles['yellowBG'];
   } else if (exports.mode === 'none') {
     return str + '';
   } else {
@@ -194,7 +194,7 @@ function applyTheme(theme) {
 //
 var x = ['bold', 'underline', 'strikethrough', 'italic', 'inverse', 'grey', 'black', 'yellow', 'red', 'green', 'blue',
 'white', 'cyan', 'magenta', 'greyBG', 'blackBG', 'yellowBG', 'redBG', 'greenBG', 'blueBG', 'whiteBG', 'cyanBG', 'magentaBG',
-'bWhiteBG', 'bGreyBG', 'bBlackBG', 'bBlueBG', 'bCyanBG', 'bGreenBG', 'bMagentaBG', 'bRedBG', 'bYellowBG'];
+'bwhiteBG', 'bgreyBG', 'bblackBG', 'bblueBG', 'bcyanBG', 'bgreenBG', 'bmagentaBG', 'bredBG', 'byellowBG'];
 x.forEach(function (style) {
 
   // __defineGetter__ at the least works in more browsers
